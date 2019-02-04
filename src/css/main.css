@@ -80,10 +80,24 @@ body,
 }
 
 .rebus__hint {
-  text-align: center;
-  grid-column-start: 2;
-  grid-column-end: span 3;
+  grid-column-start: 3;
   grid-row-start: 3;
+  align-self: center;
+  transition: 0.3s;
+  display: grid;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: white;
+  background-color: #681F67cc;
+  border-color: #681F67;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-style: none;
+}
+
+.rebus__hint:hover {
+  background-color: #88277Ecc;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border-style: solid;
 }
 
 .word {

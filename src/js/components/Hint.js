@@ -9,14 +9,16 @@ export function Hint(props) {
         const INCORRECT_ANSWER_MAX_COUNT = 3;
         const HINT_SYMBOL = '💡';
         const rebus = rebuses[current];
-        const showHint =
-          incorrectAnswerCount >= INCORRECT_ANSWER_MAX_COUNT && !rebus.isAnswered && rebus.hint;
+        const showHint = rebus.hint;
+
         return ` 
         ${
           showHint
-            ? `<span class="rebus__hint">
-                ${HINT_SYMBOL} ${rebus.hint}
-              </span>`
+            ? `<button class="rebus__hint" onclick="(function(){
+                  document.querySelector(".rebus__hint").innerHTML = "changed";
+              })();">
+              ${HINT_SYMBOL} Need a hint? ${HINT_SYMBOL}
+              </button>`
             : '<span></span>'
         }
         `;
